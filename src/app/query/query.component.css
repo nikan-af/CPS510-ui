@@ -1,0 +1,40 @@
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 20px 0;
+  margin-bottom: 40px;
+}
+
+form {
+  text-align: center;
+}
+
+.mat-form-field {
+  width: 60%;
+}
+
+.actionButtons .btn {
+  margin: 10px 10px;
+}
+
+.users-container {
+  margin: 20px 0;
+}
+
+table {
+  width: 100%;
+}
+
+td.mat-cell {
+  text-align: center;
+}
+
+th.mat-header-cell {
+  text-align: center;
+}
+
+.h4 {
+  text-align: center;
+  margin: 20px 0;
+}
+

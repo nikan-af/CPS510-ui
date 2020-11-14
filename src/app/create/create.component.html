@@ -1,0 +1,381 @@
+<h1 class="title">Create Tables</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3">
+      <h3 class="table_title">Users</h3>
+      <table>
+        <thead>
+          <th>COLUMN</th>
+          <th>TYPE</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="columnName primary_key">USERID*</td>
+            <td>NUMBER</td>
+          </tr>
+          <tr>
+            <td class="columnName">FNAME</td>
+            <td>VARCHAR2(100)</td>
+          </tr>
+          <tr>
+            <td class="columnName">LNAME</td>
+            <td>VARCHAR2(100)</td>
+          </tr>
+          <tr>
+            <td class="columnName">PASSWORD</td>
+            <td>VARCHAR2(100)</td>
+          </tr>
+          <tr>
+            <td class="columnName">EMAIL</td>
+            <td>VARCHAR2(100)</td>
+          </tr>
+          <tr>
+            <td class="columnName">ADDRESS</td>
+            <td>VARCHAR2(100)</td>
+          </tr>
+          <tr>
+            <td class="columnName">TEL</td>
+            <td>NUMBER</td>
+          </tr>
+          <tr>
+            <td class="columnName">USERTYPE</td>
+            <td>VARCHAR2(100)</td>
+          </tr>
+          <tr>
+            <td class="columnName">CREATEDAT</td>
+            <td>TIMESTAMP(6)</td>
+          </tr>
+          <tr>
+            <td class="columnName">UPDATEDAT</td>
+            <td>TIMESTAMP(6)</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="action">
+        <button (click)="populateTable('users')" class="btn btn-success">POPULATE TABLE</button>
+        <button (click)="createTable('users')" class="btn btn-outline-dark">CREATE TABLE</button>
+        <button class="delete-btn" (click)="deleteTable('users')" mat-flat-button color="warn">
+          <span class="material-icons delete-icon">delete</span>
+        </button>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <h3 class="table_title">Guests</h3>
+      <table>
+        <thead>
+          <th>COLUMN</th>
+          <th>TYPE</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="columnName primary_key">GUESTID*</td>
+            <td>NUMBER</td>
+          </tr>
+          <tr>
+            <td class="columnName">LOYALCUSTOMER</td>
+            <td>CHAR(1)</td>
+          </tr>
+          <tr>
+            <td class="columnName">DISCOUNTRATE</td>
+            <td>NUMBER(4,2)</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="action">
+        <button (click)="populateTable('guests')" class="btn btn-success">POPULATE TABLE</button>
+        <button (click)="createTable('guests')" class="btn btn-outline-dark">CREATE TABLE</button>
+        <button class="delete-btn" (click)="deleteTable('guests')" mat-flat-button color="warn">
+          <span class="material-icons delete-icon">delete</span>
+        </button>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <h3 class="table_title">Staff</h3>
+      <table>
+        <thead>
+          <th>COLUMN</th>
+          <th>TYPE</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="columnName primary_key">USERID*</td>
+            <td>NUMBER</td>
+          </tr>
+          <tr>
+            <td class="columnName">TITLE</td>
+            <td>VARCHAR2(100)</td>
+          </tr>
+          <tr>
+            <td class="columnName">DEPARTMENT</td>
+            <td>VARCHAR2(200)</td>
+          </tr>
+          <tr>
+            <td class="columnName">MANAGERID</td>
+            <td>NUMBER</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="action">
+        <button (click)="populateTable('staff')" class="btn btn-success">POPULATE TABLE</button>
+        <button (click)="createTable('staff')" class="btn btn-outline-dark">CREATE TABLE</button>
+        <button class="delete-btn" (click)="deleteTable('staff')" mat-flat-button color="warn">
+          <span class="material-icons delete-icon">delete</span>
+        </button>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <h3 class="table_title">PayRates</h3>
+      <table>
+        <thead>
+          <th>COLUMN</th>
+          <th>TYPE</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="columnName primary_key">TITLE*</td>
+            <td>NUMBER</td>
+          </tr>
+          <tr>
+            <td class="columnName">PAYRATE</td>
+            <td>NUMBER(4,2)</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="action">
+        <button (click)="populateTable('payrates')" class="btn btn-success">POPULATE TABLE</button>
+        <button (click)="createTable('payrates')" class="btn btn-outline-dark">CREATE TABLE</button>
+        <button class="delete-btn" (click)="deleteTable('payrates')" mat-flat-button color="warn">
+          <span class="material-icons delete-icon">delete</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <h3 class="table_title">Rooms</h3>
+      <table>
+        <thead>
+          <th>COLUMN</th>
+          <th>TYPE</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="columnName primary_key">ROOMID*</td>
+            <td>NUMBER</td>
+          </tr>
+          <tr>
+            <td class="columnName">STAFFID</td>
+            <td>NUMBER</td>
+          </tr>
+          <tr>
+            <td class="columnName">PRICE</td>
+            <td>NUMBER(7,2)</td>
+          </tr>
+          <tr>
+            <td class="columnName">BEDNUMBER</td>
+            <td>NUMBER</td>
+          </tr>
+          <tr>
+            <td class="columnName">BATHNUMBER</td>
+            <td>NUMBER</td>
+          </tr>
+          <tr>
+            <td class="columnName">WINDOWNUMBER</td>
+            <td>NUMBER</td>
+          </tr>
+          <tr>
+            <td class="columnName">ROOMSTATUS</td>
+            <td>VARCHAR2(500)</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="action">
+        <button (click)="populateTable('rooms')" class="btn btn-success">POPULATE TABLE</button>
+        <button (click)="createTable('rooms')" class="btn btn-outline-dark">CREATE TABLE</button>
+        <button class="delete-btn" (click)="deleteTable('rooms')" mat-flat-button color="warn">
+          <span class="material-icons delete-icon">delete</span>
+        </button>
+      </div>
+
+    </div>
+    <div class="col-md-3">
+      <h3 class="table_title">Visits</h3>
+      <table>
+        <thead>
+          <th>COLUMN</th>
+          <th>TYPE</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="columnName primary_key">RESERVEID*</td>
+            <td>NUMBER</td>
+          </tr>
+          <tr>
+            <td class="columnName">ROOMID</td>
+            <td>NUMBER</td>
+          </tr>
+          <tr>
+            <td class="columnName">GUESTID</td>
+            <td>NUMBER(</td>
+          </tr>
+          <tr>
+            <td class="columnName">STATUS</td>
+            <td>VARCHAR2(50)</td>
+          </tr>
+          <tr>
+            <td class="columnName">ADULTSNUMBER</td>
+            <td>NUMBER</td>
+          </tr>
+          <tr>
+            <td class="columnName">CHILDRENNUMBER</td>
+            <td>NUMBER</td>
+          </tr>
+          <tr>
+            <td class="columnName">DEPOSIT*</td>
+            <td>NUMBER(10,2)</td>
+          </tr>
+          <tr>
+            <td class="columnName">CHECKOUTTIME</td>
+            <td>TIMESTAMP(6)</td>
+          </tr>
+          <tr>
+            <td class="columnName">CHECKINTIME</td>
+            <td>TIMESTAMP(6)</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="action">
+        <button (click)="populateTable('visits')" class="btn btn-success">POPULATE TABLE</button>
+        <button (click)="createTable('visits')" class="btn btn-outline-dark">CREATE TABLE</button>
+        <button class="delete-btn" (click)="deleteTable('visits')" mat-flat-button color="warn">
+          <span class="material-icons delete-icon">delete</span>
+        </button>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <h3 class="table_title">HotelServices</h3>
+      <table>
+        <thead>
+          <th>COLUMN</th>
+          <th>TYPE</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="columnName primary_key">SERVICEID*</td>
+            <td>NUMBER</td>
+          </tr>
+          <tr>
+            <td class="columnName">STATUS</td>
+            <td>VARCHAR2(50)</td>
+          </tr>
+          <tr>
+            <td class="columnName">REQUIRESBOOKING</td>
+            <td>CHAR(1)</td>
+          </tr>
+          <tr>
+            <td class="columnName">STAFFID</td>
+            <td>NUMBER</td>
+          </tr>
+          <tr>
+            <td class="columnName">SERVICENAME</td>
+            <td>VARCHAR2(100)</td>
+          </tr>
+          <tr>
+            <td class="columnName">SERVICERATE</td>
+            <td>NUMBER(6,2)</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="action">
+        <button (click)="populateTable('hotelservices')" class="btn btn-success">POPULATE TABLE</button>
+        <button (click)="createTable('hotelservices')" class="btn btn-outline-dark">CREATE TABLE</button>
+        <button class="delete-btn" (click)="deleteTable('hotelservices')" mat-flat-button color="warn">
+          <span class="material-icons delete-icon">delete</span>
+        </button>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <h3 class="table_title">HotelServicesBookings</h3>
+      <table>
+        <thead>
+          <th>COLUMN</th>
+          <th>TYPE</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="columnName primary_key">BOOKINGID*</td>
+            <td>NUMBER</td>
+          </tr>
+          <tr>
+            <td class="columnName">RESERVEID</td>
+            <td>NUMBER(4,2)</td>
+          </tr>
+          <tr>
+            <td class="columnName">SERVICEID</td>
+            <td>NUMBER</td>
+          </tr>
+          <tr>
+            <td class="columnName">BOOKEDTO</td>
+            <td>TIMESTAMP(6)</td>
+          </tr>
+          <tr>
+            <td class="columnName">BOOKEDFROM</td>
+            <td>TIMESTAMP(6)</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="action">
+        <button (click)="populateTable('hotelservicesbookings')" class="btn btn-success">POPULATE TABLE</button>
+        <button (click)="createTable('hotelservicesbookings')" class="btn btn-outline-dark">CREATE TABLE</button>
+        <button class="delete-btn" (click)="deleteTable('hotelservicesbookings')" mat-flat-button color="warn">
+          <span class="material-icons delete-icon">delete</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <h3 class="table_title">Payments</h3>
+      <table>
+        <thead>
+          <th>COLUMN</th>
+          <th>TYPE</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="columnName primary_key">PAYMENTID*</td>
+            <td>NUMBER</td>
+          </tr>
+          <tr>
+            <td class="columnName">PAYMENTTYPE</td>
+            <td>VARCHAR2(100)</td>
+          </tr>
+          <tr>
+            <td class="columnName">AMOUNT</td>
+            <td>NUMBER(20,2)</td>
+          </tr>
+          <tr>
+            <td class="columnName">VISITID</td>
+            <td>NUMBER</td>
+          </tr>
+          <tr>
+            <td class="columnName">TIMESTAMP</td>
+            <td>TIMESTAMP(6)</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="action">
+        <button (click)="populateTable('payments')" class="btn btn-success">POPULATE TABLE</button>
+        <button (click)="createTable('payments')" class="btn btn-outline-dark">CREATE TABLE</button>
+        <button class="delete-btn" (click)="deleteTable('payments')" mat-flat-button color="warn">
+          <span class="material-icons delete-icon">delete</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="row all_actions">
+    <button class="btn btn-outline-success" (click)="populateAll()">POPULATE ALL TABLES</button>
+    <button class="btn btn-outline-danger" (click)="deleteAll()">DELETE ALL TABLES</button>
+    <button class="btn btn-primary" (click)="createAll()">CREATE ALL TABLES</button>
+  </div>
+</div>

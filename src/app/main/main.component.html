@@ -1,0 +1,23 @@
+<mat-drawer-container class="content" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side" opened="true">
+    <mat-toolbar color="primary" class="toolbar">
+      <span>Admin Menu</span>
+    </mat-toolbar>
+    <div class="container">
+      <ul>
+        <li>
+          <a [routerLink]="['create']" routerLinkActive="active">CREATE/DROP TABLES</a>
+        </li>
+        <li>
+          <a [routerLink]="['views']" routerLinkActive="active">VIEW TABLES</a>
+        </li>
+        <li>
+          <a [routerLink]="['query']" routerLinkActive="active">QUERY DATABASE</a>
+        </li>
+    </ul>
+    </div>
+  </mat-drawer>
+  <div class="page-container">
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>

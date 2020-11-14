@@ -1,0 +1,33 @@
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 20px 0;
+  margin-bottom: 40px;
+}
+
+table {
+  width: 100%;
+}
+
+td.mat-cell {
+  text-align: center;
+}
+
+th.mat-header-cell {
+  text-align: center;
+}
+
+.h4 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.add-item {
+  font-size: 2.2rem;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.add-item:hover {
+  cursor: pointer;
+}
